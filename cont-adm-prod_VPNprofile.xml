@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyConnectProfile xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectProfile.xsd">
+	<ClientInitialization>
+		<UseStartBeforeLogon UserControllable="false">true</UseStartBeforeLogon>
+		<AutomaticCertSelection UserControllable="false">true</AutomaticCertSelection>
+		<ShowPreConnectMessage>false</ShowPreConnectMessage>
+		<CertificateStore>All</CertificateStore>
+		<CertificateStoreOverride>false</CertificateStoreOverride>
+		<ProxySettings>IgnoreProxy</ProxySettings>
+		<AllowLocalProxyConnections>true</AllowLocalProxyConnections>
+		<AuthenticationTimeout>120</AuthenticationTimeout>
+		<AutoConnectOnStart UserControllable="false">false</AutoConnectOnStart>
+		<MinimizeOnConnect UserControllable="false">false</MinimizeOnConnect>
+		<LocalLanAccess UserControllable="false">false</LocalLanAccess>
+		<DisableCaptivePortalDetection UserControllable="true">false</DisableCaptivePortalDetection>
+		<ClearSmartcardPin UserControllable="false">true</ClearSmartcardPin>
+		<IPProtocolSupport>IPv4,IPv6</IPProtocolSupport>
+		<AutoReconnect UserControllable="false">true
+			<AutoReconnectBehavior UserControllable="false">ReconnectAfterResume</AutoReconnectBehavior>
+		</AutoReconnect>
+		<AutoUpdate UserControllable="false">true</AutoUpdate>
+		<RSASecurIDIntegration UserControllable="false">Automatic</RSASecurIDIntegration>
+		<WindowsLogonEnforcement>SingleLocalLogon</WindowsLogonEnforcement>
+		<WindowsVPNEstablishment>LocalUsersOnly</WindowsVPNEstablishment>
+		<AutomaticVPNPolicy>false</AutomaticVPNPolicy>
+		<PPPExclusion UserControllable="false">Disable
+			<PPPExclusionServerIP UserControllable="false"></PPPExclusionServerIP>
+		</PPPExclusion>
+		<EnableScripting UserControllable="false">false</EnableScripting>
+		<CertificateMatch>
+			<MatchOnlyCertsWithEKU>false</MatchOnlyCertsWithEKU>
+			<ExtendedKeyUsage>
+				<CustomExtendedMatchKey>1.3.6.1.4.1.311.20.2.2</CustomExtendedMatchKey>
+			</ExtendedKeyUsage>
+		</CertificateMatch>
+		<EnableAutomaticServerSelection UserControllable="false">false
+			<AutoServerSelectionImprovement>20</AutoServerSelectionImprovement>
+			<AutoServerSelectionSuspendTime>4</AutoServerSelectionSuspendTime>
+		</EnableAutomaticServerSelection>
+		<RetainVpnOnLogoff>false
+		</RetainVpnOnLogoff>
+		<AllowManualHostInput>true</AllowManualHostInput>
+	</ClientInitialization>
+	<ServerList>
+		<HostEntry>
+			<HostName>***CONT-ADM-PIV***</HostName>
+			<HostAddress>vpnbdcext.cms.gov</HostAddress>
+			<UserGroup>CONT-ADMIN-PIV-TG</UserGroup>
+			<BackupServerList>
+				<HostAddress>vpnbdcint.cms.local/CONT-ADMIN-PIV-TG</HostAddress>
+			</BackupServerList>
+		</HostEntry>
+		<HostEntry>
+			<HostName>***CONT-ADM-RSA***</HostName>
+			<HostAddress>vpnbdcext.cms.gov</HostAddress>
+			<UserGroup>CONT-ADMIN-RSA-TG</UserGroup>
+			<BackupServerList>
+				<HostAddress>vpnbdcint.cms.local/CONT-ADMIN-RSA-TG</HostAddress>
+			</BackupServerList>
+		</HostEntry>
+	</ServerList>
+</AnyConnectProfile>
